@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -29,13 +24,13 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <title>My Portfolio | Sandhika Galih</title>
+    <title>My Portfolio | Irfan Syahputra</title>
   </head>
   <body id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg shadow-sm fixed-top" style="background-color: var(--bs-body-bg)">
       <div class="container">
-        <a class="navbar-brand" href="#">Sandhika Galih</a>
+        <a class="navbar-brand" href="#">Irfan Syahputra</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,6 +48,31 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
+            <li class="dropdown nav-item">
+              <button class="btn nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2 opacity-50" data-theme-icon="bi-sun-fill"></i>
+                    Light
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars me-2 opacity-50" data-theme-icon="bi-moon-stars"></i>
+                    Dark
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2 opacity-50" data-theme-icon="bi-circle-half"></i>
+                    Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -61,8 +81,8 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/sandhika.jpg" alt="Sandhika Galih" width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">Sandhika Galih</h1>
+      <img src="img/ippams.JPG" alt="Sandhika Galih" width="200" class="rounded-circle img-thumbnail" />
+      <h1 class="display-4 fw-bold">Irfan Syahputra</h1>
       <p class="lead">Lecturer | Content Creator</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -106,7 +126,7 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>My Projects</h2>
+            <h2 class="text-dark">My Projects</h2>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -157,7 +177,7 @@
         <div class="container">
           <div class="row text-center mb-3">
             <div class="col">
-              <h2>My Keyboards</h2>
+              <h2  class="text-dark">My Keyboards</h2>
             </div>
           </div>
           <div class="row">
@@ -245,15 +265,78 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-5">
-      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/sandhikagalih/" class="text-white fw-bold">Sandhika Galih</a></p>
+      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/irfnmdlptra_/" class="text-white fw-bold">Irfan Syahputra</a></p>
     </footer>
     <!-- Akhir Footer -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      /*!
+ * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ */
+
+(() => {
+  'use strict'
+
+  const storedTheme = localStorage.getItem('theme')
+
+  const getPreferredTheme = () => {
+    if (storedTheme) {
+      return storedTheme
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+
+  const setTheme = function (theme) {
+    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-bs-theme', 'dark')
+    } else {
+      document.documentElement.setAttribute('data-bs-theme', theme)
+    }
+  }
+
+  setTheme(getPreferredTheme())
+
+  const showActiveTheme = theme => {
+    const activeThemeIcon = document.querySelector('.theme-icon-active')
+    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+    const iconOfActiveBtn = btnToActive.querySelector('i').dataset.themeIcon
+
+    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+      element.classList.remove('active')
+    })
+
+    btnToActive.classList.add('active')
+    activeThemeIcon.classList.remove(activeThemeIcon.dataset.themeIconActive);
+    activeThemeIcon.classList.add(iconOfActiveBtn);
+    activeThemeIcon.dataset.iconActive = iconOfActiveBtn
+  }
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (storedTheme !== 'light' || storedTheme !== 'dark') {
+      setTheme(getPreferredTheme())
+    }
+  })
+
+  window.addEventListener('DOMContentLoaded', () => {
+    showActiveTheme(getPreferredTheme())
+
+    document.querySelectorAll('[data-bs-theme-value]')
+      .forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const theme = toggle.getAttribute('data-bs-theme-value')
+          localStorage.setItem('theme', theme)
+          setTheme(theme)
+          showActiveTheme(theme)
+        })
+      })
+  })
+})()
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -261,14 +344,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
 
     <script>
-      gsap.from('.img-thumbnail', { duration: 2, rotationX: 360 });
-      gsap.from('.navbar', { duration: 1.5, opacity: 0, y: '-100%', ease: 'bounce' });
-      gsap.from('.display-4', { delay: 1, duration: 1, opacity: 0, x: '-10%' });
+      gsap.from(".img-thumbnail", { duration: 2, rotationX: 360 });
+      gsap.from(".navbar", { duration: 1.5, opacity: 0, y: "-100%", ease: "bounce" });
+      gsap.from(".display-4", { delay: 1, duration: 1, opacity: 0, x: "-10%" });
 
       gsap.registerPlugin(TextPlugin);
-      gsap.to('.lead', { delay: 1.5, duration: 2, text: 'Lecturer | Content Creator' });
+      gsap.to(".lead", { delay: 1.5, duration: 2, text: "Student | Frontend Development" });
 
-      const galleryImages = document.querySelectorAll('.gallery-img');
+      const galleryImages = document.querySelectorAll(".gallery-img");
       const delayTimes = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450];
 
       function shuffleArray(array) {
@@ -282,8 +365,8 @@
       }
       const newDelay = shuffleArray(delayTimes);
       galleryImages.forEach((img, i) => {
-        img.dataset.aos = 'fade-up';
-        img.dataset.aosDelay = i * 50 + '';
+        img.dataset.aos = "fade-up";
+        img.dataset.aosDelay = i * 50 + "";
         // img.dataset.aosDelay = newDelay[i];
       });
 
@@ -294,36 +377,36 @@
     </script>
 
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzjWwvjJihKz3-24SxEnHM5XFjNPgQd_dv3uD_fgjLSp_4AAXsC6IC4C_ECvWyLkGsuBg/exec';
-      const form = document.forms['wpu-contact-form'];
-      const btnKirim = document.querySelector('.btn-kirim');
-      const btnLoading = document.querySelector('.btn-loading');
-      const myAlert = document.querySelector('.my-alert');
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzSwmL_re7TCBksARQalPZElaoMwD52AEKmD9LYjpGy8embFFVfQTMv5BCKFKQcebAVig/exec";
+      const form = document.forms["wpu-contact-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
 
-      form.addEventListener('submit', (e) => {
+      form.addEventListener("submit", (e) => {
         e.preventDefault();
         // ketika tombol submit diklik
         // tampilkan tombol loading, hilangkan tombol kirim
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
             // tampilkan tombol kirim, hilangkan tombol loading
-            btnLoading.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
             // tampilkan alert
-            myAlert.classList.toggle('d-none');
+            myAlert.classList.toggle("d-none");
             // reset formnya
             form.reset();
-            console.log('Success!', response);
+            console.log("Success!", response);
           })
-          .catch((error) => console.error('Error!', error.message));
+          .catch((error) => console.error("Error!", error.message));
       });
     </script>
 
     <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
     <script type="text/javascript">
-      VanillaTilt.init(document.querySelectorAll('.keyboard-box'), {
+      VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
         max: 35,
         speed: 1000,
         glare: true,
